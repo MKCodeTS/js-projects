@@ -17,10 +17,17 @@ function funkyCapitalize(letter, num){
     return result;
 }
 
-console.log(funkyCapitalize("a", 7))
-
 function accum(str){
-
+    let result = [];
+    let letters = str.split("");
+    let counter= 1;
+    for (let letter of letters){
+        result.push(funkyCapitalize(letter, counter));
+        counter++
+    }
+    return result.join("-");
 }
+
+console.log(accum("abcd"));
 
 
